@@ -14,12 +14,12 @@ namespace Dev420_RestaurantManagementSystem
 {
     public partial class MainForm : Form
     {
-        private string currentUserId;
+        private User currentUserId;
         
-        public MainForm( string userId)
+        public MainForm( User user)
         {
             InitializeComponent();
-            currentUserId = userId;
+            currentUserId = user;
             
         }
 
@@ -58,6 +58,18 @@ namespace Dev420_RestaurantManagementSystem
 
             orderProcessingForm.Show();
 
+
+        }
+
+        private void btn_reservations_Click(object sender, EventArgs e)
+        {
+            //close main
+            this.Hide();
+
+            //Reservation Form
+            var reservationForm = new ReservationForm(currentUserId);
+
+            reservationForm.Show();
 
         }
     }
