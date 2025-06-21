@@ -1,0 +1,13 @@
+﻿app.config
+web.config
+*.user
+*.suo
+*.db
+.env
+.vs/
+# Ignore build outputs
+bin/
+obj/
+
+# Ignore NuGet packages
+packages/
