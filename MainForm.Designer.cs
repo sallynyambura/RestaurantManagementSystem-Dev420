@@ -43,7 +43,7 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(159, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(484, 36);
+            this.label1.Size = new System.Drawing.Size(387, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Restaurant Management System";
             // 
@@ -84,6 +84,7 @@
             this.btn_reservations.TabIndex = 1;
             this.btn_reservations.Text = "Reservations";
             this.btn_reservations.UseVisualStyleBackColor = true;
+            this.btn_reservations.Click += new System.EventHandler(this.btn_reservations_Click);
             // 
             // btn_order_tracking
             // 

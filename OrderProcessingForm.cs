@@ -14,7 +14,7 @@ namespace Dev420_RestaurantManagementSystem
 {
     public partial class OrderProcessingForm : Form
     {
-        private string currentUserId; //declare 
+        private User currentUserId; //declare 
 
         //get collection, install MongoDB.Driver, generate User Class in new file and this is the reference to the users collection in MongoDB
         IMongoCollection<MenuItem> menuItemsCollection;
@@ -22,10 +22,10 @@ namespace Dev420_RestaurantManagementSystem
 
         //stores the selected items for the current order
         List<ItemOrder> selectedItems = new List<ItemOrder>();
-        public OrderProcessingForm( string UserId)
+        public OrderProcessingForm( User user)
         {
             InitializeComponent();
-            currentUserId = UserId;
+            currentUserId = user;
         }
 
         private async void OrderProcessingForm_Load(object sender, EventArgs e)
@@ -111,7 +111,7 @@ namespace Dev420_RestaurantManagementSystem
                 var newOrder = new Order
                 {
                     OrderId = Guid.NewGuid().ToString(),
-                    UserId = currentUserId, //will be replaced with userId when logged in
+                    UserId = currentUserId.UserID, //will be replaced with userId when logged in
                     Items = selectedItems,
                     OrderDate = DateTime.Now,
                     Status = "Placed"

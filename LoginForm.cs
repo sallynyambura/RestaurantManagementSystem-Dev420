@@ -60,13 +60,19 @@ namespace Dev420_RestaurantManagementSystem
                 // Pass the logged-in userId to the next form
                 string UserId = user.UserID;
 
+                if (user.Role == "customer")
+                {
+                    var reservationForm = new ReservationForm(user); // Pass the whole user object
+                    reservationForm.Show();
+                }
+
                 if (user.Role == "staff")
                 {
-                    MainForm MainForm = new MainForm(user.UserID);
+                    MainForm MainForm = new MainForm(user);
                     MainForm.Show();
                 } else if(user.Role == "customer")
                 {
-                    MainForm MainForm = new MainForm(user.UserID);
+                    MainForm MainForm = new MainForm(user);
                     MainForm.Show();
                 }
                 else
