@@ -67,9 +67,9 @@
             this.lbl_Date.AutoSize = true;
             this.lbl_Date.Location = new System.Drawing.Point(126, 220);
             this.lbl_Date.Name = "lbl_Date";
-            this.lbl_Date.Size = new System.Drawing.Size(112, 16);
+            this.lbl_Date.Size = new System.Drawing.Size(172, 16);
             this.lbl_Date.TabIndex = 1;
-            this.lbl_Date.Text = "Reservation Date";
+            this.lbl_Date.Text = "Reservation Date and Time";
             // 
             // txb_TableNumber
             // 
@@ -80,9 +80,11 @@
             // 
             // dtp_ReservationDate
             // 
+            this.dtp_ReservationDate.CustomFormat = "MM/dd/yyyy hh:mm tt";
+            this.dtp_ReservationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtp_ReservationDate.Location = new System.Drawing.Point(350, 215);
             this.dtp_ReservationDate.Name = "dtp_ReservationDate";
-            this.dtp_ReservationDate.Size = new System.Drawing.Size(251, 22);
+            this.dtp_ReservationDate.Size = new System.Drawing.Size(321, 22);
             this.dtp_ReservationDate.TabIndex = 3;
             // 
             // nup_NumberOfPeople
