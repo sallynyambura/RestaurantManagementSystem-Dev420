@@ -139,6 +139,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Feedback.cs" />
+    <Compile Include="FeedbackForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedbackForm.Designer.cs">
+      <DependentUpon>FeedbackForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ItemOrder.cs" />
     <Compile Include="MenuItem.cs" />
     <Compile Include="MenuManagement.cs">
@@ -182,6 +189,9 @@
       <DependentUpon>ReservationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
+    <EmbeddedResource Include="FeedbackForm.resx">
+      <DependentUpon>FeedbackForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuManagement.resx">
       <DependentUpon>MenuManagement.cs</DependentUpon>
     </EmbeddedResource>

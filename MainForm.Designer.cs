@@ -75,6 +75,7 @@
             this.btn_feedback.TabIndex = 1;
             this.btn_feedback.Text = "Feedback";
             this.btn_feedback.UseVisualStyleBackColor = true;
+            this.btn_feedback.Click += new System.EventHandler(this.btn_feedback_Click);
             // 
             // btn_reservations
             // 
