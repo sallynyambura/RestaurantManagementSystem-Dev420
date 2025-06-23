@@ -141,6 +141,7 @@
             this.lbl_LoggedInUser.Size = new System.Drawing.Size(105, 16);
             this.lbl_LoggedInUser.TabIndex = 8;
             this.lbl_LoggedInUser.Text = "Logged In User: ";
+          
             // 
             // lbl_ReservationName
             // 

@@ -72,5 +72,17 @@ namespace Dev420_RestaurantManagementSystem
             reservationForm.Show();
 
         }
+
+        private void btn_feedback_Click(object sender, EventArgs e)
+        {
+            //close main
+            this.Hide();
+
+            // Show Feedback Form
+            var feedbackForm = new FeedbackForm(currentUserId);
+
+            feedbackForm.Show();
+
+        }
     }
 }
