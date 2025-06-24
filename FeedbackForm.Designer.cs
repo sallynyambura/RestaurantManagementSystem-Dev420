@@ -38,12 +38,13 @@
             this.cmb_PastOrders = new System.Windows.Forms.ComboBox();
             this.lb_Feedback = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nup_Rating)).BeginInit();
             this.SuspendLayout();
             // 
             // txb_Comment
             // 
-            this.txb_Comment.Location = new System.Drawing.Point(355, 177);
+            this.txb_Comment.Location = new System.Drawing.Point(405, 220);
             this.txb_Comment.Multiline = true;
             this.txb_Comment.Name = "txb_Comment";
             this.txb_Comment.Size = new System.Drawing.Size(265, 59);
@@ -51,7 +52,7 @@
             // 
             // nup_Rating
             // 
-            this.nup_Rating.Location = new System.Drawing.Point(355, 139);
+            this.nup_Rating.Location = new System.Drawing.Point(405, 182);
             this.nup_Rating.Maximum = new decimal(new int[] {
             5,
             0,
@@ -73,7 +74,7 @@
             // 
             // btn_SubmitFeedback
             // 
-            this.btn_SubmitFeedback.Location = new System.Drawing.Point(483, 261);
+            this.btn_SubmitFeedback.Location = new System.Drawing.Point(533, 304);
             this.btn_SubmitFeedback.Name = "btn_SubmitFeedback";
             this.btn_SubmitFeedback.Size = new System.Drawing.Size(137, 26);
             this.btn_SubmitFeedback.TabIndex = 2;
@@ -84,7 +85,7 @@
             // lbl_comment
             // 
             this.lbl_comment.AutoSize = true;
-            this.lbl_comment.Location = new System.Drawing.Point(55, 220);
+            this.lbl_comment.Location = new System.Drawing.Point(105, 263);
             this.lbl_comment.Name = "lbl_comment";
             this.lbl_comment.Size = new System.Drawing.Size(135, 16);
             this.lbl_comment.TabIndex = 4;
@@ -93,7 +94,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 103);
+            this.label2.Location = new System.Drawing.Point(105, 146);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(41, 16);
             this.label2.TabIndex = 4;
@@ -102,7 +103,7 @@
             // lbl_LoggedInUser
             // 
             this.lbl_LoggedInUser.AutoSize = true;
-            this.lbl_LoggedInUser.Location = new System.Drawing.Point(426, 30);
+            this.lbl_LoggedInUser.Location = new System.Drawing.Point(482, 22);
             this.lbl_LoggedInUser.Name = "lbl_LoggedInUser";
             this.lbl_LoggedInUser.Size = new System.Drawing.Size(102, 16);
             this.lbl_LoggedInUser.TabIndex = 5;
@@ -111,7 +112,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 145);
+            this.label1.Location = new System.Drawing.Point(105, 188);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 6;
@@ -120,7 +121,7 @@
             // cmb_PastOrders
             // 
             this.cmb_PastOrders.FormattingEnabled = true;
-            this.cmb_PastOrders.Location = new System.Drawing.Point(355, 95);
+            this.cmb_PastOrders.Location = new System.Drawing.Point(405, 138);
             this.cmb_PastOrders.Name = "cmb_PastOrders";
             this.cmb_PastOrders.Size = new System.Drawing.Size(265, 24);
             this.cmb_PastOrders.TabIndex = 7;
@@ -129,7 +130,7 @@
             // 
             this.lb_Feedback.FormattingEnabled = true;
             this.lb_Feedback.ItemHeight = 16;
-            this.lb_Feedback.Location = new System.Drawing.Point(58, 304);
+            this.lb_Feedback.Location = new System.Drawing.Point(108, 347);
             this.lb_Feedback.Name = "lb_Feedback";
             this.lb_Feedback.Size = new System.Drawing.Size(562, 196);
             this.lb_Feedback.TabIndex = 8;
@@ -138,17 +139,28 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(175, 50);
+            this.label3.Location = new System.Drawing.Point(225, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 29);
             this.label3.TabIndex = 9;
             this.label3.Text = "Feedback form: ";
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(485, 52);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(98, 26);
+            this.btn_Back.TabIndex = 10;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // FeedbackForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 525);
+            this.ClientSize = new System.Drawing.Size(786, 564);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lb_Feedback);
             this.Controls.Add(this.cmb_PastOrders);
@@ -180,5 +192,6 @@
         private System.Windows.Forms.ComboBox cmb_PastOrders;
         private System.Windows.Forms.ListBox lb_Feedback;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

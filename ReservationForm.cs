@@ -134,6 +134,15 @@ namespace Dev420_RestaurantManagementSystem
 
         }
 
-       
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            //close order processing from form
+            this.Hide();
+
+            //show main form system
+            var mainForm = new MainForm(currentUserId);
+
+            mainForm.Show();
+        }
     }
 }

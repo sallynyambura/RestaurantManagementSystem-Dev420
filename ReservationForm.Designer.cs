@@ -41,13 +41,14 @@
             this.lbl_LoggedInUser = new System.Windows.Forms.Label();
             this.lbl_ReservationName = new System.Windows.Forms.Label();
             this.txb_ReservationName = new System.Windows.Forms.TextBox();
+            this.btn_Back = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nup_NumberOfPeople)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_TableNumber
             // 
             this.lbl_TableNumber.AutoSize = true;
-            this.lbl_TableNumber.Location = new System.Drawing.Point(126, 140);
+            this.lbl_TableNumber.Location = new System.Drawing.Point(168, 173);
             this.lbl_TableNumber.Name = "lbl_TableNumber";
             this.lbl_TableNumber.Size = new System.Drawing.Size(94, 16);
             this.lbl_TableNumber.TabIndex = 0;
@@ -56,7 +57,7 @@
             // lbl_People
             // 
             this.lbl_People.AutoSize = true;
-            this.lbl_People.Location = new System.Drawing.Point(126, 182);
+            this.lbl_People.Location = new System.Drawing.Point(168, 215);
             this.lbl_People.Name = "lbl_People";
             this.lbl_People.Size = new System.Drawing.Size(116, 16);
             this.lbl_People.TabIndex = 1;
@@ -65,7 +66,7 @@
             // lbl_Date
             // 
             this.lbl_Date.AutoSize = true;
-            this.lbl_Date.Location = new System.Drawing.Point(126, 220);
+            this.lbl_Date.Location = new System.Drawing.Point(168, 253);
             this.lbl_Date.Name = "lbl_Date";
             this.lbl_Date.Size = new System.Drawing.Size(172, 16);
             this.lbl_Date.TabIndex = 1;
@@ -73,7 +74,7 @@
             // 
             // txb_TableNumber
             // 
-            this.txb_TableNumber.Location = new System.Drawing.Point(350, 134);
+            this.txb_TableNumber.Location = new System.Drawing.Point(392, 167);
             this.txb_TableNumber.Name = "txb_TableNumber";
             this.txb_TableNumber.Size = new System.Drawing.Size(251, 22);
             this.txb_TableNumber.TabIndex = 2;
@@ -82,21 +83,21 @@
             // 
             this.dtp_ReservationDate.CustomFormat = "MM/dd/yyyy hh:mm tt";
             this.dtp_ReservationDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_ReservationDate.Location = new System.Drawing.Point(350, 215);
+            this.dtp_ReservationDate.Location = new System.Drawing.Point(392, 248);
             this.dtp_ReservationDate.Name = "dtp_ReservationDate";
             this.dtp_ReservationDate.Size = new System.Drawing.Size(321, 22);
             this.dtp_ReservationDate.TabIndex = 3;
             // 
             // nup_NumberOfPeople
             // 
-            this.nup_NumberOfPeople.Location = new System.Drawing.Point(350, 176);
+            this.nup_NumberOfPeople.Location = new System.Drawing.Point(392, 209);
             this.nup_NumberOfPeople.Name = "nup_NumberOfPeople";
             this.nup_NumberOfPeople.Size = new System.Drawing.Size(251, 22);
             this.nup_NumberOfPeople.TabIndex = 4;
             // 
             // btn_Reserve
             // 
-            this.btn_Reserve.Location = new System.Drawing.Point(607, 253);
+            this.btn_Reserve.Location = new System.Drawing.Point(649, 286);
             this.btn_Reserve.Name = "btn_Reserve";
             this.btn_Reserve.Size = new System.Drawing.Size(143, 26);
             this.btn_Reserve.TabIndex = 5;
@@ -106,7 +107,7 @@
             // 
             // btn_Cancel
             // 
-            this.btn_Cancel.Location = new System.Drawing.Point(607, 300);
+            this.btn_Cancel.Location = new System.Drawing.Point(649, 333);
             this.btn_Cancel.Name = "btn_Cancel";
             this.btn_Cancel.Size = new System.Drawing.Size(143, 26);
             this.btn_Cancel.TabIndex = 5;
@@ -118,7 +119,7 @@
             // 
             this.lb_Reservations.FormattingEnabled = true;
             this.lb_Reservations.ItemHeight = 16;
-            this.lb_Reservations.Location = new System.Drawing.Point(129, 253);
+            this.lb_Reservations.Location = new System.Drawing.Point(171, 286);
             this.lb_Reservations.Name = "lb_Reservations";
             this.lb_Reservations.Size = new System.Drawing.Size(472, 148);
             this.lb_Reservations.TabIndex = 6;
@@ -141,12 +142,11 @@
             this.lbl_LoggedInUser.Size = new System.Drawing.Size(105, 16);
             this.lbl_LoggedInUser.TabIndex = 8;
             this.lbl_LoggedInUser.Text = "Logged In User: ";
-          
             // 
             // lbl_ReservationName
             // 
             this.lbl_ReservationName.AutoSize = true;
-            this.lbl_ReservationName.Location = new System.Drawing.Point(126, 98);
+            this.lbl_ReservationName.Location = new System.Drawing.Point(168, 131);
             this.lbl_ReservationName.Name = "lbl_ReservationName";
             this.lbl_ReservationName.Size = new System.Drawing.Size(134, 16);
             this.lbl_ReservationName.TabIndex = 9;
@@ -154,16 +154,27 @@
             // 
             // txb_ReservationName
             // 
-            this.txb_ReservationName.Location = new System.Drawing.Point(350, 92);
+            this.txb_ReservationName.Location = new System.Drawing.Point(392, 125);
             this.txb_ReservationName.Name = "txb_ReservationName";
             this.txb_ReservationName.Size = new System.Drawing.Size(251, 22);
             this.txb_ReservationName.TabIndex = 10;
+            // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(607, 59);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(107, 29);
+            this.btn_Back.TabIndex = 11;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
             // 
             // ReservationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 450);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.txb_ReservationName);
             this.Controls.Add(this.lbl_ReservationName);
             this.Controls.Add(this.lbl_LoggedInUser);
@@ -201,5 +212,6 @@
         private System.Windows.Forms.Label lbl_LoggedInUser;
         private System.Windows.Forms.Label lbl_ReservationName;
         private System.Windows.Forms.TextBox txb_ReservationName;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

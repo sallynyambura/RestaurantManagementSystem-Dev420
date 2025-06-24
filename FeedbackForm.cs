@@ -137,11 +137,20 @@ namespace Dev420_RestaurantManagementSystem
             }
         }
 
-       
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            //close order processing from form
+            this.Hide();
+
+            //show main form system
+            var mainForm = new MainForm(currentUserId);
+
+            mainForm.Show();
+        }
     }
 
     //ComboBox display logic so that it can pair readable text with a hidden value(OrderId).
-    
+
     internal class ComboBoxItem
     {
         public string Display { get; set; } //what the user will see

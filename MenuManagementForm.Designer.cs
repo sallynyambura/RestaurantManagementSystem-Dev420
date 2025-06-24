@@ -1,6 +1,6 @@
 ﻿namespace Dev420_RestaurantManagementSystem
 {
-    partial class MenuManagement
+    partial class MenuManagementForm
     {
         /// <summary>
         /// Required designer variable.
@@ -46,6 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_signout = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.lbl_LoggedInUser = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,7 +69,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 272);
+            this.dataGridView1.Location = new System.Drawing.Point(73, 292);
             this.dataGridView1.Name = "dataGridView1";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -85,35 +86,35 @@
             // 
             // txb_menuItemName
             // 
-            this.txb_menuItemName.Location = new System.Drawing.Point(264, 95);
+            this.txb_menuItemName.Location = new System.Drawing.Point(264, 115);
             this.txb_menuItemName.Name = "txb_menuItemName";
             this.txb_menuItemName.Size = new System.Drawing.Size(195, 22);
             this.txb_menuItemName.TabIndex = 1;
             // 
             // txb_menuItemDescription
             // 
-            this.txb_menuItemDescription.Location = new System.Drawing.Point(264, 132);
+            this.txb_menuItemDescription.Location = new System.Drawing.Point(264, 152);
             this.txb_menuItemDescription.Name = "txb_menuItemDescription";
             this.txb_menuItemDescription.Size = new System.Drawing.Size(195, 22);
             this.txb_menuItemDescription.TabIndex = 1;
             // 
             // txb_menuItemPrice
             // 
-            this.txb_menuItemPrice.Location = new System.Drawing.Point(264, 167);
+            this.txb_menuItemPrice.Location = new System.Drawing.Point(264, 187);
             this.txb_menuItemPrice.Name = "txb_menuItemPrice";
             this.txb_menuItemPrice.Size = new System.Drawing.Size(195, 22);
             this.txb_menuItemPrice.TabIndex = 1;
             // 
             // txb_menuItemCategory
             // 
-            this.txb_menuItemCategory.Location = new System.Drawing.Point(264, 207);
+            this.txb_menuItemCategory.Location = new System.Drawing.Point(264, 227);
             this.txb_menuItemCategory.Name = "txb_menuItemCategory";
             this.txb_menuItemCategory.Size = new System.Drawing.Size(195, 22);
             this.txb_menuItemCategory.TabIndex = 1;
             // 
             // btn_addItem
             // 
-            this.btn_addItem.Location = new System.Drawing.Point(505, 95);
+            this.btn_addItem.Location = new System.Drawing.Point(505, 115);
             this.btn_addItem.Name = "btn_addItem";
             this.btn_addItem.Size = new System.Drawing.Size(158, 25);
             this.btn_addItem.TabIndex = 2;
@@ -123,7 +124,7 @@
             // 
             // btn_deleteItem
             // 
-            this.btn_deleteItem.Location = new System.Drawing.Point(505, 126);
+            this.btn_deleteItem.Location = new System.Drawing.Point(505, 146);
             this.btn_deleteItem.Name = "btn_deleteItem";
             this.btn_deleteItem.Size = new System.Drawing.Size(158, 25);
             this.btn_deleteItem.TabIndex = 2;
@@ -133,7 +134,7 @@
             // 
             // btn_updateItem
             // 
-            this.btn_updateItem.Location = new System.Drawing.Point(505, 157);
+            this.btn_updateItem.Location = new System.Drawing.Point(505, 177);
             this.btn_updateItem.Name = "btn_updateItem";
             this.btn_updateItem.Size = new System.Drawing.Size(158, 25);
             this.btn_updateItem.TabIndex = 2;
@@ -144,7 +145,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(70, 98);
+            this.label1.Location = new System.Drawing.Point(70, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(108, 16);
             this.label1.TabIndex = 3;
@@ -153,7 +154,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(70, 138);
+            this.label2.Location = new System.Drawing.Point(70, 158);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(142, 16);
             this.label2.TabIndex = 3;
@@ -162,7 +163,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(70, 173);
+            this.label3.Location = new System.Drawing.Point(70, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 16);
             this.label3.TabIndex = 3;
@@ -171,7 +172,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 213);
+            this.label4.Location = new System.Drawing.Point(70, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(126, 16);
             this.label4.TabIndex = 3;
@@ -181,7 +182,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(211, 24);
+            this.label5.Location = new System.Drawing.Point(211, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(248, 29);
             this.label5.TabIndex = 3;
@@ -189,7 +190,7 @@
             // 
             // btn_signout
             // 
-            this.btn_signout.Location = new System.Drawing.Point(587, 32);
+            this.btn_signout.Location = new System.Drawing.Point(588, 45);
             this.btn_signout.Name = "btn_signout";
             this.btn_signout.Size = new System.Drawing.Size(158, 25);
             this.btn_signout.TabIndex = 2;
@@ -199,18 +200,29 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(648, 228);
+            this.button1.Location = new System.Drawing.Point(648, 248);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(111, 31);
             this.button1.TabIndex = 4;
             this.button1.Text = "Back";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // MenuManagement
+            // lbl_LoggedInUser
+            // 
+            this.lbl_LoggedInUser.AutoSize = true;
+            this.lbl_LoggedInUser.Location = new System.Drawing.Point(441, 29);
+            this.lbl_LoggedInUser.Name = "lbl_LoggedInUser";
+            this.lbl_LoggedInUser.Size = new System.Drawing.Size(105, 16);
+            this.lbl_LoggedInUser.TabIndex = 5;
+            this.lbl_LoggedInUser.Text = "Logged In User: ";
+            // 
+            // MenuManagementForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 508);
+            this.Controls.Add(this.lbl_LoggedInUser);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -226,7 +238,7 @@
             this.Controls.Add(this.txb_menuItemDescription);
             this.Controls.Add(this.txb_menuItemName);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "MenuManagement";
+            this.Name = "MenuManagementForm";
             this.Text = "MenuManagement";
             this.Load += new System.EventHandler(this.MenuManagement_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -252,5 +264,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_signout;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lbl_LoggedInUser;
     }
 }

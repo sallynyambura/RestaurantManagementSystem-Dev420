@@ -83,6 +83,15 @@ namespace Dev420_RestaurantManagementSystem
 
         }
 
-     
+        private void btn_Back_Click(object sender, EventArgs e)
+        {
+            //close registration form 
+            this.Hide();
+
+            //show loginForm 
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+
+        }
     }
 }
