@@ -84,5 +84,17 @@ namespace Dev420_RestaurantManagementSystem
             feedbackForm.Show();
 
         }
+
+        private void btn_order_tracking_Click(object sender, EventArgs e)
+        {
+            //close main
+            this.Hide();
+
+            // Show Feedback Form
+            var orderTrackingForm = new OrderTrackingForm(currentUserId);
+
+            orderTrackingForm.Show();
+
+        }
     }
 }

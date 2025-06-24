@@ -11,10 +11,10 @@ namespace Dev420_RestaurantManagementSystem
     public partial class FeedbackForm : Form
     {
         // MongoDB collections for accessing orders and feedback documents
-        private IMongoCollection<Order> ordersCollection;
-        private IMongoCollection<Feedback> feedbackCollection;
+        private readonly IMongoCollection<Order> ordersCollection;
+        private readonly IMongoCollection<Feedback> feedbackCollection;
         // Stores currently logged-in user for associated feedback
-        private User currentUserId;
+        private readonly User currentUserId;
 
 
         public FeedbackForm(User user)

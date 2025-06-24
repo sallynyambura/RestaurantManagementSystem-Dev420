@@ -95,6 +95,7 @@
             this.btn_order_tracking.TabIndex = 1;
             this.btn_order_tracking.Text = "Order Tracking";
             this.btn_order_tracking.UseVisualStyleBackColor = true;
+            this.btn_order_tracking.Click += new System.EventHandler(this.btn_order_tracking_Click);
             // 
             // btn_signout
             // 
