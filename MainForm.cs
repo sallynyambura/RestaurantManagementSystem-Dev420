@@ -20,7 +20,22 @@ namespace Dev420_RestaurantManagementSystem
         {
             InitializeComponent();
             currentUserId = user;
-            
+            //logged in user shown in corner
+            lbl_LoggedInUser.Text = $"Welcome, {currentUserId.Username}";
+
+            //show role in the corner as well 
+            lbl_RoleInfo.Text = $"Role: {currentUserId.Role}";
+
+
+
+            // Hide buttons based on role
+            if (currentUserId.Role != "staff")
+            {
+                btn_order_tracking.Visible = false;
+                btn_menu_management.Visible = false;
+                // Add any other staff-only buttons here
+            }
+
         }
 
         private void btn_signout_Click(object sender, EventArgs e)
@@ -42,7 +57,7 @@ namespace Dev420_RestaurantManagementSystem
             this.Hide();
 
             //show menu management system
-            var menuForm = new MenuManagement();
+            var menuForm = new MenuManagementForm(currentUserId);
 
             menuForm.Show();
 

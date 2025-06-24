@@ -148,11 +148,11 @@
     </Compile>
     <Compile Include="ItemOrder.cs" />
     <Compile Include="MenuItem.cs" />
-    <Compile Include="MenuManagement.cs">
+    <Compile Include="MenuManagementForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuManagement.Designer.cs">
-      <DependentUpon>MenuManagement.cs</DependentUpon>
+    <Compile Include="MenuManagementForm.Designer.cs">
+      <DependentUpon>MenuManagementForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Order.cs" />
     <Compile Include="OrderProcessingForm.cs">
@@ -198,8 +198,8 @@
     <EmbeddedResource Include="FeedbackForm.resx">
       <DependentUpon>FeedbackForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuManagement.resx">
-      <DependentUpon>MenuManagement.cs</DependentUpon>
+    <EmbeddedResource Include="MenuManagementForm.resx">
+      <DependentUpon>MenuManagementForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderProcessingForm.resx">
       <DependentUpon>OrderProcessingForm.cs</DependentUpon>

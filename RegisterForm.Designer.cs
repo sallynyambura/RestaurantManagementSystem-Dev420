@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txb_email = new System.Windows.Forms.TextBox();
             this.txb_role = new System.Windows.Forms.TextBox();
+            this.btn_Back = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label5
@@ -124,11 +125,22 @@
             this.txb_role.Size = new System.Drawing.Size(151, 22);
             this.txb_role.TabIndex = 10;
             // 
+            // btn_Back
+            // 
+            this.btn_Back.Location = new System.Drawing.Point(472, 30);
+            this.btn_Back.Name = "btn_Back";
+            this.btn_Back.Size = new System.Drawing.Size(106, 26);
+            this.btn_Back.TabIndex = 15;
+            this.btn_Back.Text = "Back";
+            this.btn_Back.UseVisualStyleBackColor = true;
+            this.btn_Back.Click += new System.EventHandler(this.btn_Back_Click);
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(654, 450);
+            this.Controls.Add(this.btn_Back);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txb_email;
         private System.Windows.Forms.TextBox txb_role;
+        private System.Windows.Forms.Button btn_Back;
     }
 }

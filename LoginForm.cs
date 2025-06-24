@@ -47,47 +47,50 @@ namespace Dev420_RestaurantManagementSystem
             string username = txb_username.Text;
             string password = txb_password.Text;
 
-            //step 2: create a filter to match both username and password, using AND logical statement to ensure both fields will match
-            var filter = Builders<User>.Filter.Eq("username", username) &
-                Builders<User>.Filter.Eq("password", password);
-
-            //step3: try to find the user in the "user's" collection
-            var user = usersCollection.Find(filter).FirstOrDefault();
-
-            //step 4: if the user is found, log them in and then redirect based on the role 
-            if (user != null)
+            try
             {
-                // Pass the logged-in userId to the next form
-                string UserId = user.UserID;
+                // Step 2: Create a filter to match both username and password
+                var filter = Builders<User>.Filter.Eq("username", username) &
+                             Builders<User>.Filter.Eq("password", password);
 
-                if (user.Role == "customer")
-                {
-                    var reservationForm = new ReservationForm(user); // Pass the whole user object
-                    reservationForm.Show();
-                }
+                // Step 3: Try to find the user in the "users" collection
+                var user = usersCollection.Find(filter).FirstOrDefault();
 
-                if (user.Role == "staff")
+                // Step 4: If the user is found, proceed to their role-specific form
+                if (user != null)
                 {
-                    MainForm MainForm = new MainForm(user);
-                    MainForm.Show();
-                } else if(user.Role == "customer")
-                {
-                    MainForm MainForm = new MainForm(user);
-                    MainForm.Show();
+                    if (user.Role == "customer")
+                    {
+                        var mainForm = new MainForm(user); // pass the full user object
+                        mainForm.Show();
+                        this.Hide();
+                    }
+                    else if (user.Role == "staff")
+                    {
+                        var mainForm = new MainForm(user);
+                        mainForm.Show();
+                        this.Hide(); // Only hide if successful
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unknown role. Please contact support.");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("invalid username or password, error, please try again or register.");
+                    // If no user found, show error and keep form open
+                    MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
             }
-
-            //hide login form 
-            this.Hide();
-            
+            catch (Exception ex)
+            {
+                // Catch unexpected errors (e.g., database connection issue)
+                MessageBox.Show("An error occurred while trying to log in:\n" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
+           
         private void btn_register_Click(object sender, EventArgs e)
         {
             this.Hide();

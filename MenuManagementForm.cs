@@ -13,15 +13,21 @@ using MongoDB.Driver;
 
 namespace Dev420_RestaurantManagementSystem
 {
-    public partial class MenuManagement : Form
+    public partial class MenuManagementForm : Form
     {
         //get collection, install MongoDB.Driver, generate MenuItem Class in new file and this is the reference to the menuItem collection in MongoDB
-        IMongoCollection<MenuItem> menuItemsCollection;
-        public MenuManagement()
+        private IMongoCollection<MenuItem> menuItemsCollection;
+        // Currently logged-in user
+        private readonly User currentUser;
+        public MenuManagementForm(User user)
         {
            
             InitializeComponent();
-        
+            currentUser = user;
+
+            // Displays the current user's username in the corner label
+            lbl_LoggedInUser.Text = $"Welcome, {user.Username}";
+
         }
         private void MenuManagement_Load(object sender, EventArgs e)
         {
@@ -121,6 +127,17 @@ namespace Dev420_RestaurantManagementSystem
             //show loginForm 
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //close order processing from form
+            this.Hide();
+
+            //show main form system
+            var mainForm = new MainForm(currentUser);
+
+            mainForm.Show();
         }
     }
 
